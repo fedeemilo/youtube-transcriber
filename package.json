@@ -3,7 +3,8 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "start": "next start"
+    "start": "next start",
+    "install": "pip install -r requirements.txt"
   },
   "dependencies": {
     "@radix-ui/react-form": "^0.0.2",
