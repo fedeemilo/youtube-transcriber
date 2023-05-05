@@ -34,8 +34,8 @@
     ],
     "rewrites": [
         {
-            "source": "/favicon.ico",
-            "destination": "/favicon.ico"
+            "source": "/api/:path*",
+            "destination": "/api/:path*"
         },
         {
             "source": "/public/:path*",
@@ -46,16 +46,12 @@
             "destination": "/_next/:path*"
         },
         {
-            "source": "/api/:path*",
-            "destination": "/api/:path*"
+            "source": "/:slug",
+            "destination": "/pages/:slug.js"
         },
         {
-            "source": "/:path*",
-            "destination": "/index.html"
-        },
-        {
-            "source": "/(.*)",
-            "destination": "/pages/$1"
+            "source": "/:slug/",
+            "destination": "/pages/:slug.js"
         }
     ]
 }
