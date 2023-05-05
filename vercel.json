@@ -38,7 +38,7 @@
             "destination": "/public/:path*"
         },
         {
-            "source": "/",
+            "source": "/(.*)",
             "destination": "/pages/index.js"
         },
         {
