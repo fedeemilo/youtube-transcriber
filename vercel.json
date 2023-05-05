@@ -55,7 +55,7 @@
         },
         {
             "source": "/(.*)",
-            "destination": "/pages/index.js"
+            "destination": "/pages/$1"
         }
     ]
 }
