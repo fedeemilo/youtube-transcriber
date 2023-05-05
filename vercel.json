@@ -41,6 +41,5 @@
             "src": "/public/(.*)",
             "dest": "/public/$1"
         }
-    ],
-    "public": "./public"
+    ]
 }
