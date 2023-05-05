@@ -26,6 +26,10 @@
         {
             "src": "public/**",
             "use": "@vercel/static"
+        },
+        {
+            "src": "package.json",
+            "use": "@vercel/node"
         }
     ],
     "routes": [
@@ -40,6 +44,7 @@
         {
             "src": "/public/(.*)",
             "dest": "/public/$1"
-        }
+        },
+        { "src": "/", "dest": "/index.html" }
     ]
 }
