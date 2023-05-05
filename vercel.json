@@ -2,6 +2,10 @@
     "version": 2,
     "builds": [
         {
+            "src": ".",
+            "use": "@vercel/node"
+        },
+        {
             "src": "scripts/transcribe.py",
             "use": "@vercel/node",
             "config": {
@@ -18,17 +22,6 @@
                     "scripts/translate.py": "755"
                 }
             }
-        },
-        {
-            "src": ".",
-            "use": "@vercel/node",
-            "config": {
-                "maxLambdaSize": "15mb"
-            }
-        },
-        {
-            "src": "public/**",
-            "use": "@vercel/static"
         }
     ],
     "routes": [
