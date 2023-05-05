@@ -40,6 +40,10 @@
         {
             "source": "/:path*",
             "destination": "/pages/:path*.js"
+        },
+        {
+            "source": "/",
+            "destination": "/pages/index.js"
         }
     ]
 }
