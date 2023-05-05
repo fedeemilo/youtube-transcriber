@@ -48,6 +48,10 @@
         {
             "source": "/(.*)",
             "destination": "/pages/index.js"
+        },
+        {
+            "source": "/favicon.ico",
+            "destination": "/public/favicon.ico"
         }
     ]
 }
