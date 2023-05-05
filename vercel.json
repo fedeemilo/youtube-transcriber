@@ -38,12 +38,16 @@
             "destination": "/public/:path*"
         },
         {
-            "source": "/(.*)",
+            "source": "/",
             "destination": "/pages/index.js"
         },
         {
             "source": "/:slug/",
             "destination": "/pages/:slug.js"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "/pages/index.js"
         }
     ]
 }
