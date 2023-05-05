@@ -52,6 +52,10 @@
         {
             "source": "/:path*",
             "destination": "/index.html"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "/pages/index.js"
         }
     ]
 }
