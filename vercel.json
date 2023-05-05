@@ -3,47 +3,14 @@
     "builds": [
         {
             "src": "next.config.js",
-            "use": "@vercel/node"
-        },
-        {
-            "src": "scripts/transcribe.py",
-            "use": "@vercel/node",
-            "config": {
-                "permissions": {
-                    "scripts/transcribe.py": "755"
-                }
-            }
-        },
-        {
-            "src": "scripts/translate.py",
-            "use": "@vercel/node",
-            "config": {
-                "permissions": {
-                    "scripts/translate.py": "755"
-                }
-            }
-        },
-        {
-            "src": "public/**",
-            "use": "@vercel/static"
-        },
-        {
-            "src": "package.json",
-            "use": "@vercel/node"
+            "use": "@vercel/next"
         }
     ],
-    "rewrites": [
+    "routes": [],
+    "files": [
         {
-            "source": "/public/:path*",
-            "destination": "/public/:path*"
-        },
-        {
-            "source": "/:path*",
-            "destination": "/pages/:path*.js"
-        },
-        {
-            "source": "/",
-            "destination": "/pages/index.js"
+            "source": "/scripts/(.*)",
+            "permissions": "755"
         }
     ]
 }
