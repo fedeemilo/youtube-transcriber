@@ -46,8 +46,8 @@
             "destination": "/_next/:path*"
         },
         {
-            "source": "/:slug",
-            "destination": "/pages/:slug.js"
+            "source": "/",
+            "destination": "/pages/index.js"
         },
         {
             "source": "/:slug/",
