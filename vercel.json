@@ -22,12 +22,24 @@
                     "scripts/translate.py": "755"
                 }
             }
+        },
+        {
+            "src": "public/**",
+            "use": "@vercel/static"
         }
     ],
     "routes": [
         {
             "src": "/(.*)",
             "dest": "/"
+        },
+        {
+            "src": "/favicon.ico",
+            "dest": "/favicon.ico"
+        },
+        {
+            "src": "/public/(.*)",
+            "dest": "/public/$1"
         }
     ],
     "public": "./public"
