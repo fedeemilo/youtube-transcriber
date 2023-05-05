@@ -47,11 +47,11 @@
         },
         {
             "source": "/",
-            "destination": "/pages/index.js"
+            "destination": "/youtube-transcriber/pages/index.js"
         },
         {
             "source": "/:slug/",
-            "destination": "/pages/:slug.js"
+            "destination": "/youtube-transcriber/pages/:slug.js"
         }
     ]
 }
