@@ -32,38 +32,26 @@
             "use": "@vercel/node"
         }
     ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "/$1"
-        },
-
-        {
-            "src": "/favicon.ico",
-            "dest": "/favicon.ico"
-        },
-        {
-            "src": "/public/(.*)",
-            "dest": "/public/$1"
-        },
-        {
-            "src": "/_next/(.*)",
-            "dest": "/_next/$1"
-        },
-        {
-            "src": "/api/(.*)",
-            "dest": "/api/$1"
-        },
-
-        {
-            "src": "/",
-            "dest": "/index.html"
-        }
-    ],
     "rewrites": [
         {
-            "source": "/api/(.*)",
-            "destination": "/pages/api/$1"
+            "source": "/favicon.ico",
+            "destination": "/favicon.ico"
+        },
+        {
+            "source": "/public/:path*",
+            "destination": "/public/:path*"
+        },
+        {
+            "source": "/_next/:path*",
+            "destination": "/_next/:path*"
+        },
+        {
+            "source": "/api/:path*",
+            "destination": "/api/:path*"
+        },
+        {
+            "source": "/:path*",
+            "destination": "/index.html"
         }
     ]
 }
