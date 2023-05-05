@@ -38,20 +38,8 @@
             "destination": "/public/:path*"
         },
         {
-            "source": "/",
-            "destination": "/pages/index.js"
-        },
-        {
-            "source": "/:slug/",
-            "destination": "/pages/:slug.js"
-        },
-        {
-            "source": "/(.*)",
-            "destination": "/pages/index.js"
-        },
-        {
-            "source": "/favicon.ico",
-            "destination": "/public/favicon.ico"
+            "source": "/:path*",
+            "destination": "/pages/:path*.js"
         }
     ]
 }
