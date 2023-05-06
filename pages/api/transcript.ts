@@ -21,5 +21,7 @@ export default function GET(
         { cwd: __dirname }
     )
 
+    console.log(cmd)
+
     transferChildProcessOutput(cmd, response)
 }
