@@ -7,7 +7,7 @@
         },
         {
             "src": "scripts/transcribe.py",
-            "use": "@vercel/python",
+            "use": "@vercel/node",
             "config": {
                 "permissions": {
                     "scripts/transcribe.py": "755"
@@ -16,7 +16,7 @@
         },
         {
             "src": "scripts/translate.py",
-            "use": "@vercel/python",
+            "use": "@vercel/node",
             "config": {
                 "permissions": {
                     "scripts/translate.py": "755"
