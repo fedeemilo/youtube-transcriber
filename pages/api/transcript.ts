@@ -15,13 +15,10 @@ export default function GET(
 
     console.log('Video ID:', video_id)
 
-    const cmd = spawn(
-        'python',
-        [path.join(process.cwd(), 'scripts/transcribe.py'), video_id || ''],
-        { cwd: __dirname }
-    )
-
-    console.log(cmd)
+    const cmd = spawn('python', [
+        path.join(process.cwd(), 'scripts/transcribe.py'),
+        video_id || ''
+    ])
 
     transferChildProcessOutput(cmd, response)
 }
