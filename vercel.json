@@ -4,13 +4,30 @@
         {
             "src": "next.config.js",
             "use": "@vercel/next"
+        },
+        {
+            "src": "scripts/transcribe.py",
+            "use": "@vercel/node",
+            "config": {
+                "permissions": {
+                    "scripts/transcribe.py": "755"
+                }
+            }
+        },
+        {
+            "src": "scripts/translate.py",
+            "use": "@vercel/node",
+            "config": {
+                "permissions": {
+                    "scripts/translate.py": "755"
+                }
+            }
         }
     ],
-    "routes": [],
-    "files": [
+    "routes": [
         {
-            "source": "/scripts/(.*)",
-            "permissions": "755"
+            "src": "/(.*)",
+            "dest": "/$1"
         }
     ]
 }
